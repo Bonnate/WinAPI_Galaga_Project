@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일\Win">
+      <UniqueIdentifier>{8ee74123-8498-4cb0-89fd-ecc6283507cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Main">
+      <UniqueIdentifier>{292097af-fab7-4f0c-b242-88ceeff7f02b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Func">
+      <UniqueIdentifier>{cdda6929-8b93-4cd1-860e-955e67819a46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Func">
+      <UniqueIdentifier>{a861de48-f8b5-482e-973f-c6934973b75f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Hierachy">
+      <UniqueIdentifier>{4d2cfb38-16d4-490e-b9b7-683499f8f17d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Hierachy">
+      <UniqueIdentifier>{8b633f91-5480-41d6-b537-c772550a6b9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Hierachy\Player">
+      <UniqueIdentifier>{53a5976f-ff80-4751-9cc7-90d5d1510216}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Hierachy\Player">
+      <UniqueIdentifier>{a97bd684-c8ef-4e36-b41b-0cdd6f763103}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Hierachy\Enemy">
+      <UniqueIdentifier>{5ef934bf-ae9f-48e3-8bfb-e573538ffad7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Hierachy\Enemy">
+      <UniqueIdentifier>{555cbdf1-8e69-4874-ba21-51a103cf2715}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Hierachy\Enemy\EnemyBullet">
+      <UniqueIdentifier>{8dee62b9-9db4-4117-832f-1542793e6dac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Hierachy\Enemy\EnemyBullet">
+      <UniqueIdentifier>{e615207b-8841-4462-a770-e780f68371be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Hierachy\Manager">
+      <UniqueIdentifier>{dbbf4bae-3619-48f8-9c75-c9f18ffa945a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Hierachy\Manager">
+      <UniqueIdentifier>{058f3c69-2afc-491f-8c47-3cbc8d6694ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Hierachy\BG">
+      <UniqueIdentifier>{78cffa31-caac-426b-9c14-101e95931af7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Hierachy\BG">
+      <UniqueIdentifier>{3d1ea93f-f7cd-4eab-b8a2-027377f80dff}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일\Win</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>헤더 파일\Win</Filter>
+    </ClInclude>
+    <ClInclude Include="GameProject.h">
+      <Filter>헤더 파일\Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일\Win</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>헤더 파일\Func</Filter>
+    </ClInclude>
+    <ClInclude Include="Application.h">
+      <Filter>헤더 파일\Func</Filter>
+    </ClInclude>
+    <ClInclude Include="BMP.h">
+      <Filter>헤더 파일\Func</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCollider2D.h">
+      <Filter>헤더 파일\Func</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>헤더 파일\Func</Filter>
+    </ClInclude>
+    <ClInclude Include="debug.h">
+      <Filter>헤더 파일\Func</Filter>
+    </ClInclude>
+    <ClInclude Include="deltaTime.h">
+      <Filter>헤더 파일\Func</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>헤더 파일\Func</Filter>
+    </ClInclude>
+    <ClInclude Include="graphic.h">
+      <Filter>헤더 파일\Func</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>헤더 파일\Func</Filter>
+    </ClInclude>
+    <ClInclude Include="Random.h">
+      <Filter>헤더 파일\Func</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>헤더 파일\Func</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectManager.h">
+      <Filter>헤더 파일\Func</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>헤더 파일\Hierachy\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy1.h">
+      <Filter>헤더 파일\Hierachy\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy2.h">
+      <Filter>헤더 파일\Hierachy\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy3.h">
+      <Filter>헤더 파일\Hierachy\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy4.h">
+      <Filter>헤더 파일\Hierachy\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy5.h">
+      <Filter>헤더 파일\Hierachy\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerBullet.h">
+      <Filter>헤더 파일\Hierachy\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyBullet1.h">
+      <Filter>헤더 파일\Hierachy\Enemy\EnemyBullet</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyBullet2.h">
+      <Filter>헤더 파일\Hierachy\Enemy\EnemyBullet</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyBullet3.h">
+      <Filter>헤더 파일\Hierachy\Enemy\EnemyBullet</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyBullet4.h">
+      <Filter>헤더 파일\Hierachy\Enemy\EnemyBullet</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyBullet5.h">
+      <Filter>헤더 파일\Hierachy\Enemy\EnemyBullet</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemySpawnManager.h">
+      <Filter>헤더 파일\Hierachy\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="BG.h">
+      <Filter>헤더 파일\Hierachy\BG</Filter>
+    </ClInclude>
+    <ClInclude Include="BGLayout.h">
+      <Filter>헤더 파일\Hierachy\BG</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GameProject.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="GameProject.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GameProject.cpp">
+      <Filter>소스 파일\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>소스 파일\Func</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>소스 파일\Func</Filter>
+    </ClCompile>
+    <ClCompile Include="BMP.cpp">
+      <Filter>소스 파일\Func</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxCollider2D.cpp">
+      <Filter>소스 파일\Func</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>소스 파일\Func</Filter>
+    </ClCompile>
+    <ClCompile Include="debug.cpp">
+      <Filter>소스 파일\Func</Filter>
+    </ClCompile>
+    <ClCompile Include="deltaTime.cpp">
+      <Filter>소스 파일\Func</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>소스 파일\Func</Filter>
+    </ClCompile>
+    <ClCompile Include="graphic.cpp">
+      <Filter>소스 파일\Func</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>소스 파일\Func</Filter>
+    </ClCompile>
+    <ClCompile Include="Random.cpp">
+      <Filter>소스 파일\Func</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>소스 파일\Func</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectManager.cpp">
+      <Filter>소스 파일\Func</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>소스 파일\Hierachy\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy1.cpp">
+      <Filter>소스 파일\Hierachy\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy2.cpp">
+      <Filter>소스 파일\Hierachy\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy3.cpp">
+      <Filter>소스 파일\Hierachy\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy4.cpp">
+      <Filter>소스 파일\Hierachy\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy5.cpp">
+      <Filter>소스 파일\Hierachy\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerBullet.cpp">
+      <Filter>소스 파일\Hierachy\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyBullet1.cpp">
+      <Filter>소스 파일\Hierachy\Enemy\EnemyBullet</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyBullet2.cpp">
+      <Filter>소스 파일\Hierachy\Enemy\EnemyBullet</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyBullet3.cpp">
+      <Filter>소스 파일\Hierachy\Enemy\EnemyBullet</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyBullet4.cpp">
+      <Filter>소스 파일\Hierachy\Enemy\EnemyBullet</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyBullet5.cpp">
+      <Filter>소스 파일\Hierachy\Enemy\EnemyBullet</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemySpawnManager.cpp">
+      <Filter>소스 파일\Hierachy\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="BG.cpp">
+      <Filter>소스 파일\Hierachy\BG</Filter>
+    </ClCompile>
+    <ClCompile Include="BGLayout.cpp">
+      <Filter>소스 파일\Hierachy\BG</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
