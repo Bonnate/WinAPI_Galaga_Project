@@ -31,6 +31,7 @@
 #include "Button.h"
 #include "Application.h"
 #include "ObjectManager.h"
+#include "Sound.h"
 
 //HIER
 	//PLAYER

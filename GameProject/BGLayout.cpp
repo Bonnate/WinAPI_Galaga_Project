@@ -12,7 +12,7 @@ BGLayout::~BGLayout()
 
 void BGLayout::start()
 {
-	setImage("Asset/BGLayout.bmp");
+	setImage("Asset/BGLayout2.bmp");
 }
 
 void BGLayout::update()

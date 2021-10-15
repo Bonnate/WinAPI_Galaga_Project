@@ -3,6 +3,7 @@
 
 #include "framework.h"
 #include "GameProject.h"
+#include "fmod.hpp"
 
 #define MAX_LOADSTRING 100
 
@@ -46,10 +47,12 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     Random::Init();         //랜덤 초기화
     Time::init();           //타이머 초기화
 
+    ObjectManager::instantiate(new Sound("Asset/Sound/shoot.wav", "PlayerShot"), 0);
+    ObjectManager::instantiate(new Sound("Asset/Sound/hit_1.wav", "PlayerHit"), 0);
+
     ObjectManager::instantiate(new BG(0, 0), 1);
     ObjectManager::instantiate(new BG(0, -HEIGHT), 1);
-    ObjectManager::instantiate(new BGLayout(0, 0), 2);
-
+    ObjectManager::instantiate(new BGLayout(0, 0), UI_LAYER);
 
     ObjectManager::instantiate(new Player(100, 100), 3);
     ObjectManager::instantiate(new Enemy1(100, 200), 3);
@@ -62,9 +65,6 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     ObjectManager::instantiate(new EnemyBullet3(300, 500), 3);
     ObjectManager::instantiate(new EnemyBullet4(300, 600), 3);
     ObjectManager::instantiate(new EnemyBullet5(300, 700), 3);
-
-
-
 
     // 기본 메시지 루프입니다:
     while (msg.message != WM_QUIT && Application::getIsPlaying() == true)

@@ -13,6 +13,8 @@ Player::~Player()
 void Player::start()
 {
 	setImage("Asset/Player.bmp");
+
+	mShotSound = (Sound*)ObjectManager::find("PlayerShot");
 }
 
 void Player::update()
@@ -45,7 +47,7 @@ void Player::fire()
 {
 	if (Input::getKeyDown("space"))
 	{
-		printf("ÃÑ¾Ë ¹ß»ç\n");
+		mShotSound->playSound();
 		ObjectManager::instantiate(new PlayerBullet(getPx() + PLAYER_BULLET_X_GAP, getPy()), 4);
 	}
 }

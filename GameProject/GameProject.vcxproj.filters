@@ -159,6 +159,9 @@
     <ClInclude Include="BGLayout.h">
       <Filter>헤더 파일\Hierachy\BG</Filter>
     </ClInclude>
+    <ClInclude Include="Sound.h">
+      <Filter>헤더 파일\Func</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="GameProject.rc">
@@ -260,6 +263,9 @@
     </ClCompile>
     <ClCompile Include="BGLayout.cpp">
       <Filter>소스 파일\Hierachy\BG</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound.cpp">
+      <Filter>소스 파일\Func</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

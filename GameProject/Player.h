@@ -8,6 +8,7 @@ class Player : public Sprite
 {
 private:
 	float mMoveSpeed;
+	Sound* mShotSound;
 
 public:
 	Player(float px, float py);
