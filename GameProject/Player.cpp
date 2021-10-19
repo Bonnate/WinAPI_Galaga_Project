@@ -2,6 +2,8 @@
 
 Player::Player(float px, float py) : Sprite("Player", "", true, px, py)
 {
+	this->mFireDelay = .2f;
+	this->mCurrentFireDelay = .0f;
 	this->mMoveSpeed = 200.0f;
 }
 
@@ -19,6 +21,8 @@ void Player::start()
 
 void Player::update()
 {
+	mCurrentFireDelay += Time::deltaTime;
+
 	move();
 	fire();
 }
@@ -45,9 +49,11 @@ void Player::move()
 
 void Player::fire()
 {
-	if (Input::getKeyDown("space"))
+	if (Input::getKey("space") && mCurrentFireDelay >= mFireDelay)
 	{
 		mShotSound->playSound();
 		ObjectManager::instantiate(new PlayerBullet(getPx() + PLAYER_BULLET_X_GAP, getPy()), 4);
+		
+		mCurrentFireDelay = .0f;
 	}
 }

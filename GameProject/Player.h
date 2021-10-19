@@ -7,6 +7,8 @@
 class Player : public Sprite
 {
 private:
+	float mFireDelay;
+	float mCurrentFireDelay;
 	float mMoveSpeed;
 	Sound* mShotSound;
 
