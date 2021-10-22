@@ -10,7 +10,7 @@ void ObjectManager::instantiate(GameObject* o, int layer)
 
 void ObjectManager::destroy(GameObject* o)
 {
-	//충돌검사쌍의 사용이 끝난후..삭제할 수 있도록...삭제...정보 표시를함//
+	//충돌검사쌍의 사용이 끝난후..삭제할 수 있도록...삭제를 늦춤//
 	o->setDead(true);
 }
 
@@ -36,14 +36,12 @@ void ObjectManager::clearDead()
 	//충돌 검사 이후에...삭제 표시 오브젝트를 제거하기//
 	for (int layer = 0; layer < MAX_LAYER; layer++)
 	{
-		for (int i = 0; i < gameObject[layer].size(); i++)
+		for (int i = gameObject[layer].size() - 1; i >= 0; i--)
 		{
 			if (gameObject[layer][i]->getDead() == true)
 			{
 				delete gameObject[layer][i];							//객체 삭제
 				gameObject[layer].erase(gameObject[layer].begin() + i); //stl vector의 주소 저장 공간 삭제
-				
-				i--;  //삭제 대상인덱스를 건너뀌는것을 방지하기 위해서..인덱스를 감소시킴
 			}
 		}
 	}

@@ -5,6 +5,7 @@ Player::Player(float px, float py) : Sprite("Player", "", true, px, py)
 	this->mFireDelay = .2f;
 	this->mCurrentFireDelay = .0f;
 	this->mMoveSpeed = 200.0f;
+	this->mShotSound = nullptr;
 }
 
 Player::~Player() 
@@ -14,6 +15,9 @@ Player::~Player()
 
 void Player::start()
 {
+	addBoxCollider2D(0, 18, 35, 21);
+	addBoxCollider2D(13, 0, 7, 39);
+
 	setImage("Asset/Player.bmp");
 
 	mShotSound = (Sound*)ObjectManager::find("PlayerShot");
@@ -37,13 +41,13 @@ void Player::move()
 	{
 		translate(0, mMoveSpeed * Time::deltaTime);
 	}
-	if (Input::getKey("left") && getPx() > 0)
+	if (Input::getKey("left") && getPx() > ZERO)
 	{
-		translate(-mMoveSpeed * Time::deltaTime, 0);
+		translate(-mMoveSpeed * Time::deltaTime, ZERO);
 	}
 	if (Input::getKey("right") && getPx() + getwidth() < WIDTH_SCENE)
 	{
-		translate(mMoveSpeed * Time::deltaTime, 0);
+		translate(mMoveSpeed * Time::deltaTime, ZERO);
 	}
 }
 

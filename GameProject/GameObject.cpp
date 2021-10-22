@@ -150,8 +150,8 @@ void GameObject::draw()
 void GameObject::translate(float x, float y)
 {
 	//게임오브젝트..이동시키기//
-	px = px + x;
-	py = py + y;
+	px+=x;
+	py+=y;
 
 	//충돌체..이동시키기//
 	for(int i=0 ; i < boxCollider.size() ; i++)

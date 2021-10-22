@@ -63,4 +63,6 @@
 #define WIDTH_SCENE 400
 #define HEIGHT_SCENE 720
 
+#define ZERO 0
+
 using namespace std;

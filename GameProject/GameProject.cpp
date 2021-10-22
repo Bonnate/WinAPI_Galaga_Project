@@ -123,7 +123,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
     hInst = hInstance; // 인스턴스 핸들을 전역 변수에 저장합니다.
 
     //윈도우 크기 조정하기
-    RECT rt = { 0,0,WIDTH, HEIGHT };
+    RECT rt = { 0,0, WIDTH, HEIGHT };
 
     AdjustWindowRect(&rt, WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU, FALSE);
 
