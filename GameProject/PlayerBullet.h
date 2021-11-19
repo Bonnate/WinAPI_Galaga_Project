@@ -14,4 +14,5 @@ public:
 
 	void start();
 	void update();
+	void onEnable();
 };

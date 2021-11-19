@@ -12,6 +12,8 @@ private:
 	float mMoveSpeed;
 	Sound* mShotSound;
 
+	ObjectPool mBulletPool;
+
 public:
 	Player(float px, float py);
 	~Player();

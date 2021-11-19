@@ -56,7 +56,20 @@ void Player::fire()
 	if (Input::getKey("space") && mCurrentFireDelay >= mFireDelay)
 	{
 		mShotSound->playSound();
-		ObjectManager::instantiate(new PlayerBullet(getPx() + PLAYER_BULLET_X_GAP, getPy()), 4);
+
+		GameObject* poolReady = mBulletPool.getFromPool();
+
+		if (poolReady == nullptr)
+		{
+			mBulletPool.PushPool(ObjectManager::instantiate(new PlayerBullet(getPx() + PLAYER_BULLET_X_GAP, getPy()), 4));
+			cout << "생성!"<<endl;
+		}
+		else
+		{
+			poolReady->translateWorld(getPx() + PLAYER_BULLET_X_GAP, getPy());
+			poolReady->onEnable();
+			cout << "재활용!" << endl;
+		}
 		
 		mCurrentFireDelay = .0f;
 	}

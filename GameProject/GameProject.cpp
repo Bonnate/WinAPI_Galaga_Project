@@ -47,6 +47,11 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     Random::Init();         //랜덤 초기화
     Time::init();           //타이머 초기화
 
+    ObjectManager::instantiate(new Wall(-10, 80, 15, 720, "LeftWall"), 9);
+    ObjectManager::instantiate(new Wall(WIDTH_SCENE - 5, 80, 10, 720, "RightWall"), 9);
+    ObjectManager::instantiate(new Wall(0, 75, 400, 10, "TopWall"), 9);
+    ObjectManager::instantiate(new Wall(0, 795, 400, 10, "BottomWall"), 9);
+
     ObjectManager::instantiate(new Sound("Asset/Sound/shoot.wav", "PlayerShot"), 0);
     ObjectManager::instantiate(new Sound("Asset/Sound/hit_1.wav", "PlayerHit"), 0);
 
@@ -54,17 +59,27 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     ObjectManager::instantiate(new BG(0, -HEIGHT), 1);
     ObjectManager::instantiate(new BGLayout(0, 0), UI_LAYER);
 
-    ObjectManager::instantiate(new Player(100, 100), 3);
-    ObjectManager::instantiate(new Enemy1(100, 200), 3);
-    ObjectManager::instantiate(new Enemy2(100, 300), 3);
-    ObjectManager::instantiate(new Enemy3(100, 400), 3);
-    ObjectManager::instantiate(new Enemy4(100, 500), 3);
+    ObjectManager::instantiate(new TextManager(), UI_LAYER);
 
-    ObjectManager::instantiate(new EnemyBullet1(300, 300), 3);
-    ObjectManager::instantiate(new EnemyBullet2(300, 400), 3);
-    ObjectManager::instantiate(new EnemyBullet3(300, 500), 3);
-    ObjectManager::instantiate(new EnemyBullet4(300, 600), 3);
-    ObjectManager::instantiate(new EnemyBullet5(300, 700), 3);
+    GameManager::InitGameManager();
+
+    ObjectManager::instantiate(new Player(300, 700), 3);
+    ObjectManager::instantiate(new Enemy1(100, 200), 3);
+    //ObjectManager::instantiate(new Enemy1(100, 200), 3);
+    //ObjectManager::instantiate(new Enemy1(100, 200), 3);
+    //ObjectManager::instantiate(new Enemy1(100, 200), 3);
+    //ObjectManager::instantiate(new Enemy1(100, 200), 3);
+    //ObjectManager::instantiate(new Enemy1(100, 200), 3);
+    //ObjectManager::instantiate(new Enemy1(100, 200), 3);
+    //ObjectManager::instantiate(new Enemy2(100, 300), 3);
+    //ObjectManager::instantiate(new Enemy3(100, 400), 3);
+    //ObjectManager::instantiate(new Enemy4(100, 500), 3);
+
+    //ObjectManager::instantiate(new EnemyBullet1(300, 300), 3);
+    //ObjectManager::instantiate(new EnemyBullet2(300, 400), 3);
+    //ObjectManager::instantiate(new EnemyBullet3(300, 500), 3);
+    //ObjectManager::instantiate(new EnemyBullet4(300, 600), 3);
+    //ObjectManager::instantiate(new EnemyBullet5(300, 700), 3);
 
     // 기본 메시지 루프입니다:
     while (msg.message != WM_QUIT && Application::getIsPlaying() == true)

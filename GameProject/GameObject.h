@@ -52,14 +52,17 @@ public:
 	virtual void update();
 	virtual void draw();
 	virtual void onDrawGizmos();
+	virtual void onEnable();
 
 	void translate(float x, float y);
+	void translateWorld(float x, float y);
 
 	GameObject * instantiate(GameObject* o, int layer);
 	void destroy(GameObject* o);
 
 	//충돌체 추가하기//
 	void addBoxCollider2D(float x, float y, float width, float height);
+	void addBoxCollider2D(RECT rect);
 
 	//자식 게임오브젝트..추가/삭제 하기//
 	void addChildObject(GameObject* o, int layer);
@@ -76,4 +79,6 @@ public:
 
 	//부모포인터 게터
 	GameObject* getParent();
+
+	virtual void SetDirection(int val);
 };

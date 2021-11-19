@@ -32,6 +32,8 @@
 #include "Application.h"
 #include "ObjectManager.h"
 #include "Sound.h"
+#include "Text.h"
+#include "ObjectPool.h"
 
 //HIER
 	//PLAYER
@@ -51,11 +53,15 @@
 	#include"EnemyBullet5.h"
 
 	//MANAGER
-	#include "EnemySpawnManager.h"
+	#include "GameManager.h"
 
 	//BG
 	#include "BG.h"
 	#include "BGLayout.h"
+	#include "Wall.h"
+
+	//CANVUS
+	#include "TextManager.h"
 
 #define WIDTH  480
 #define HEIGHT 800

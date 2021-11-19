@@ -14,6 +14,13 @@ PlayerBullet::~PlayerBullet()
 void PlayerBullet::start()
 {
 	setImage("Asset/PlayerBullet.bmp");
+	addBoxCollider2D(0, 0, 7, 13);
+}
+
+void PlayerBullet::onEnable()
+{
+	this->setActive(true);
+	mLifeTime = 10.0f;
 }
 
 void PlayerBullet::update()
@@ -22,14 +29,14 @@ void PlayerBullet::update()
 	mLifeTime -= Time::deltaTime;
 	if (mLifeTime < .0f)
 	{
-		destroy(this);
+		this->setActive(false);
 	}
 
 
 	//벽에 닿으면 파괴됩니다.. 메모리 누수 방지
 	if (getPy() < HEIGHT - HEIGHT_SCENE)
 	{
-		destroy(this);
+		this->setActive(false);
 	}
 
 	

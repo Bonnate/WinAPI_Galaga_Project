@@ -61,6 +61,12 @@
     <Filter Include="소스 파일\Hierachy\BG">
       <UniqueIdentifier>{3d1ea93f-f7cd-4eab-b8a2-027377f80dff}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Hierachy\Canvus">
+      <UniqueIdentifier>{994aad4b-d530-4631-8db9-ce18a4784a01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Hierachy\Canvus">
+      <UniqueIdentifier>{5e18d723-3543-4fe5-aedf-7970be4a1519}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -150,9 +156,6 @@
     <ClInclude Include="EnemyBullet5.h">
       <Filter>헤더 파일\Hierachy\Enemy\EnemyBullet</Filter>
     </ClInclude>
-    <ClInclude Include="EnemySpawnManager.h">
-      <Filter>헤더 파일\Hierachy\Manager</Filter>
-    </ClInclude>
     <ClInclude Include="BG.h">
       <Filter>헤더 파일\Hierachy\BG</Filter>
     </ClInclude>
@@ -161,6 +164,21 @@
     </ClInclude>
     <ClInclude Include="Sound.h">
       <Filter>헤더 파일\Func</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>헤더 파일\Func</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectPool.h">
+      <Filter>헤더 파일\Func</Filter>
+    </ClInclude>
+    <ClInclude Include="TextManager.h">
+      <Filter>헤더 파일\Hierachy\Canvus</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.h">
+      <Filter>헤더 파일\Hierachy\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Wall.h">
+      <Filter>헤더 파일\Hierachy\BG</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -255,9 +273,6 @@
     <ClCompile Include="EnemyBullet5.cpp">
       <Filter>소스 파일\Hierachy\Enemy\EnemyBullet</Filter>
     </ClCompile>
-    <ClCompile Include="EnemySpawnManager.cpp">
-      <Filter>소스 파일\Hierachy\Manager</Filter>
-    </ClCompile>
     <ClCompile Include="BG.cpp">
       <Filter>소스 파일\Hierachy\BG</Filter>
     </ClCompile>
@@ -266,6 +281,21 @@
     </ClCompile>
     <ClCompile Include="Sound.cpp">
       <Filter>소스 파일\Func</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>소스 파일\Func</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectPool.cpp">
+      <Filter>소스 파일\Func</Filter>
+    </ClCompile>
+    <ClCompile Include="TextManager.cpp">
+      <Filter>소스 파일\Hierachy\Canvus</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>소스 파일\Hierachy\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Wall.cpp">
+      <Filter>소스 파일\Hierachy\BG</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

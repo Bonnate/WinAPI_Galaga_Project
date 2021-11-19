@@ -2,10 +2,12 @@
 
 vector<GameObject*> ObjectManager::gameObject[MAX_LAYER];
 
-void ObjectManager::instantiate(GameObject* o, int layer)
+GameObject* ObjectManager::instantiate(GameObject* o, int layer)
 {
 	gameObject[layer].push_back(o);
 	o->start();
+
+	return o;
 }
 
 void ObjectManager::destroy(GameObject* o)

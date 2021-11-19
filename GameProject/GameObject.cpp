@@ -166,6 +166,23 @@ void GameObject::translate(float x, float y)
 	}
 }
 
+void GameObject::translateWorld(float x, float y)
+{
+	px =x;
+	py =y;
+
+	for (int i = 0; i < boxCollider.size(); i++)
+	{
+		boxCollider[i]->translateWorld(x, y);
+	}
+
+	//자식객체..이동시키기//
+	for (int i = 0; i < childObject.size(); i++)
+	{
+		childObject[i]->translateWorld(x, y);
+	}
+}
+
 GameObject * GameObject::instantiate(GameObject* o, int layer)
 {
 	ObjectManager::instantiate(o, layer);
@@ -186,6 +203,11 @@ void GameObject::destroy(GameObject* o)
 void GameObject::addBoxCollider2D(float x, float y, float width, float height)
 {
 	boxCollider.push_back( new BoxCollider2D(x+px, y+py, width, height) );
+}
+
+void GameObject::addBoxCollider2D(RECT rect)
+{
+	boxCollider.push_back(new BoxCollider2D(rect.left + px, rect.top + py, rect.right, rect.bottom));
 }
 
 void GameObject::addChildObject(GameObject* o, int layer)
@@ -240,6 +262,9 @@ void GameObject::onTriggerStay(GameObject* other)
 void GameObject::onDestroy()
 {}
 
+void GameObject::onEnable()
+{}
+
 GameObject* GameObject::find(string name)
 {
 	for (int i = 0; i < childObject.size(); i++)
@@ -257,4 +282,9 @@ GameObject* GameObject::find(string name)
 GameObject* GameObject::getParent()
 {
 	return parent;
+}
+
+void GameObject::SetDirection(int val)
+{
+
 }

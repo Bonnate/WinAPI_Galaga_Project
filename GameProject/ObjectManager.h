@@ -14,7 +14,7 @@ private:
 public:
 
 	//stl vector에 인스턴트(객체) 추가/삭제 함수//
-	static void instantiate(GameObject* o, int layer);
+	static GameObject* instantiate(GameObject* o, int layer);
 	static void destroy(GameObject* o);
 
 	//목록에..추가된 객체..업데이트 함수//

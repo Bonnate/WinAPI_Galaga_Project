@@ -15,4 +15,5 @@ public:
 
 	//충돌체..이동시키기//
 	void translate(float x, float y);
+	void translateWorld(float x, float y);
 };

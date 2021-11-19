@@ -26,6 +26,12 @@ void BoxCollider2D::translate(float x, float y)
 	this->y = this->y + y;
 }
 
+void BoxCollider2D::translateWorld(float x, float y)
+{
+	this->x = x;
+	this->y = y;
+}
+
 void BoxCollider2D::getBoxVertex(float& x0, float& y0, float& x1, float& y1)
 {
 	x0 = x;

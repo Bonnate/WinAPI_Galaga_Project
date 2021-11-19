@@ -5,6 +5,10 @@
 class Enemy1 : public Sprite
 {
 private:
+	float mMoveTimeDelay;
+
+	int xPosMagnitude;
+	int yPosMagnitude;
 
 public:
 	Enemy1(float px, float py);
@@ -12,5 +16,9 @@ public:
 
 	void start();
 	void update();
+
+	void onTriggerStay(GameObject* other);
+
+	void SetDirection(int code);
 };
 
