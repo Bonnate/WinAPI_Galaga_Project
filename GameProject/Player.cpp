@@ -53,7 +53,7 @@ void Player::move()
 
 void Player::fire()
 {
-	if (Input::getKey("space") && mCurrentFireDelay >= mFireDelay)
+	if (Input::getKeyDown("space") && mCurrentFireDelay >= mFireDelay)
 	{
 		mShotSound->playSound();
 
@@ -72,5 +72,7 @@ void Player::fire()
 		}
 		
 		mCurrentFireDelay = .0f;
+
+		
 	}
 }

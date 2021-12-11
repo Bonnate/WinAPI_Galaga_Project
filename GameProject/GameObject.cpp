@@ -210,7 +210,7 @@ void GameObject::addBoxCollider2D(RECT rect)
 	boxCollider.push_back(new BoxCollider2D(rect.left + px, rect.top + py, rect.right, rect.bottom));
 }
 
-void GameObject::addChildObject(GameObject* o, int layer)
+GameObject* GameObject::addChildObject(GameObject* o, int layer)
 {
 	childObject.push_back(o);		
 	ObjectManager::instantiate(o, layer);
@@ -220,6 +220,8 @@ void GameObject::addChildObject(GameObject* o, int layer)
 
 	//자식객체에..부모객체 포인터..저장하기
 	o->parent = this;
+
+	return o;
 }
 
 void GameObject::delChildObject(GameObject* o)

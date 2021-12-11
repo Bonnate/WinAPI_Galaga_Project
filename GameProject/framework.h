@@ -54,6 +54,7 @@
 
 	//MANAGER
 	#include "GameManager.h"
+	#include "EnemyManager.h"
 
 	//BG
 	#include "BG.h"
@@ -62,6 +63,10 @@
 
 	//CANVUS
 	#include "TextManager.h"
+	#include "EndingBox.h"
+
+	//FX
+	#include "Explosion.h"
 
 #define WIDTH  480
 #define HEIGHT 800

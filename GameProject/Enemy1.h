@@ -5,7 +5,6 @@
 class Enemy1 : public Sprite
 {
 private:
-	float mMoveTimeDelay;
 
 	int xPosMagnitude;
 	int yPosMagnitude;

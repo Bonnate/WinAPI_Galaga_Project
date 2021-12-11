@@ -64,7 +64,7 @@ void ObjectManager::checkCollision()
 					for (int j = 0; j < gameObject[layerJ].size(); j++)
 					{
 
-						//같은 레이어내의....게임오브젝트들의...충돌검사//
+						//같은 레이어 내의 게임오브젝트 충돌검사//
 						if (layerI == layerJ)
 						{
 							if (i > j)
@@ -77,7 +77,7 @@ void ObjectManager::checkCollision()
 						}
 						else {
 
-							//다른 레이거 같의...게임오브젝트들의...충돌검사//
+							//다른 레이어 게임오브젝트 충돌검사//
 							GameObject* objI = gameObject[layerI][i];
 							GameObject* objJ = gameObject[layerJ][j];
 
@@ -114,9 +114,9 @@ void ObjectManager::checkObjectCollision(GameObject* objI, GameObject* objJ)
 				{
 					//충돌 이벤트..알려주기//
 					objI->onTriggerStay(objJ);  //objI에게..objJ하고 충돌중임을 알림
-					objJ->onTriggerStay(objI);  //objJ에게..objI하고 충돌줌임을 알림
+					objJ->onTriggerStay(objI);  //objJ에게..objI하고 충돌중임을 알림
 
-					//일단...충돌이 한번...발생하면...중복된 충돌처리를..방지하기 위해서..충돌처리를 중단함
+			
 					return;
 				}
 			}
@@ -133,7 +133,7 @@ void ObjectManager::draw()
 			if (gameObject[layer][i]->getActive() == true)
 			{
 				gameObject[layer][i]->draw();
-				gameObject[layer][i]->onDrawGizmos();
+				//gameObject[layer][i]->onDrawGizmos();
 			}
 		}
 	}
@@ -150,6 +150,16 @@ void ObjectManager::clear()
 
 		gameObject[layer].clear();
 	}
+}
+
+void ObjectManager::clear(int layerNum)
+{
+	for (int i = 0; i < gameObject[layerNum].size(); i++)
+	{
+		gameObject[layerNum][i]->setDead(true);
+	}
+
+	gameObject[layerNum].clear();
 }
 
 GameObject* ObjectManager::find(string name)

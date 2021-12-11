@@ -154,6 +154,7 @@
     <ClInclude Include="Button.h" />
     <ClInclude Include="debug.h" />
     <ClInclude Include="deltaTime.h" />
+    <ClInclude Include="EndingBox.h" />
     <ClInclude Include="Enemy1.h" />
     <ClInclude Include="Enemy2.h" />
     <ClInclude Include="Enemy3.h" />
@@ -164,8 +165,10 @@
     <ClInclude Include="EnemyBullet3.h" />
     <ClInclude Include="EnemyBullet4.h" />
     <ClInclude Include="EnemyBullet5.h" />
+    <ClInclude Include="EnemyManager.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="ObjectPool.h" />
+    <ClInclude Include="Explosion.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="GameObject.h" />
@@ -193,6 +196,7 @@
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="debug.cpp" />
     <ClCompile Include="deltaTime.cpp" />
+    <ClCompile Include="EndingBox.cpp" />
     <ClCompile Include="Enemy1.cpp" />
     <ClCompile Include="Enemy2.cpp" />
     <ClCompile Include="Enemy3.cpp" />
@@ -203,8 +207,10 @@
     <ClCompile Include="EnemyBullet3.cpp" />
     <ClCompile Include="EnemyBullet4.cpp" />
     <ClCompile Include="EnemyBullet5.cpp" />
+    <ClCompile Include="EnemyManager.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="ObjectPool.cpp" />
+    <ClCompile Include="Explosion.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameProject.cpp" />

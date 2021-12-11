@@ -63,23 +63,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     GameManager::InitGameManager();
 
-    ObjectManager::instantiate(new Player(300, 700), 3);
-    ObjectManager::instantiate(new Enemy1(100, 200), 3);
-    //ObjectManager::instantiate(new Enemy1(100, 200), 3);
-    //ObjectManager::instantiate(new Enemy1(100, 200), 3);
-    //ObjectManager::instantiate(new Enemy1(100, 200), 3);
-    //ObjectManager::instantiate(new Enemy1(100, 200), 3);
-    //ObjectManager::instantiate(new Enemy1(100, 200), 3);
-    //ObjectManager::instantiate(new Enemy1(100, 200), 3);
-    //ObjectManager::instantiate(new Enemy2(100, 300), 3);
-    //ObjectManager::instantiate(new Enemy3(100, 400), 3);
-    //ObjectManager::instantiate(new Enemy4(100, 500), 3);
 
-    //ObjectManager::instantiate(new EnemyBullet1(300, 300), 3);
-    //ObjectManager::instantiate(new EnemyBullet2(300, 400), 3);
-    //ObjectManager::instantiate(new EnemyBullet3(300, 500), 3);
-    //ObjectManager::instantiate(new EnemyBullet4(300, 600), 3);
-    //ObjectManager::instantiate(new EnemyBullet5(300, 700), 3);
 
     // 기본 메시지 루프입니다:
     while (msg.message != WM_QUIT && Application::getIsPlaying() == true)
@@ -96,6 +80,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
         Time::update();        //델타타임 업데이트
         Input::update();       //키상태   업데이트
+        EnemyManager::UpdateTime();
 
         ObjectManager::update();        //매니저 목록(오브젝트 계층구조)의 객체들 업데이트
         ObjectManager::checkCollision();//매니저 목록(오브젝트 계층구조)의 객체들의 업데이트후..충돌검사
@@ -104,6 +89,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         ObjectManager::draw();   //매니저 목록(오브젝트 계층구조)의 객체들 그리기
 
         render();
+
+        GameManager::DisplayEndingBox();
     }
 
     STOP_DEBUG_CONSOLE();

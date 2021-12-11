@@ -1,15 +1,14 @@
 #include "framework.h"
-
-Input::State  Input::state[9] = { State::keyUpRep, State::keyUpRep,State::keyUpRep,State::keyUpRep, State::keyUpRep,State::keyUpRep,State::keyUpRep, State::keyUpRep, State::keyUpRep };  //0-놓고 있음, 1-한번 누름 2-누르고 있음, 3-한번놓음
-int			  Input::key[9]   = { VK_LBUTTON     , VK_RBUTTON     , VK_MBUTTON    ,  VK_LEFT      , VK_RIGHT       , VK_UP         , VK_DOWN        , VK_SPACE       , 'Z' };
-string		  Input::name[9]  = { "lbutton"      , "rbuttom"      , "mbutton",       "left",           "right",       "up"         ,  "down"        , "space",         "z" };
+Input::State  Input::state[11] = { State::keyUpRep, State::keyUpRep,State::keyUpRep,State::keyUpRep, State::keyUpRep,State::keyUpRep,State::keyUpRep, State::keyUpRep, State::keyUpRep,	State::keyUpRep,	State::keyUpRep };  //0-놓고 있음, 1-한번 누름 2-누르고 있음, 3-한번놓음
+int			  Input::key[11]   = { VK_LBUTTON     , VK_RBUTTON     , VK_MBUTTON    ,  VK_LEFT      , VK_RIGHT       , VK_UP         , VK_DOWN        , VK_SPACE       , 'Z'				, 'Y'				, 'N'};
+string		  Input::name[11]  = { "lbutton"      , "rbuttom"      , "mbutton",       "left",           "right",       "up"         ,  "down"        , "space",         "z"				, "y"				, "n"};
 
 MousePosition Input::mousePosition = { 0,0 };
 
 void Input::update()
 {
 	//키배열의...상태업데이트
-	for (int i = 0; i < 9; i++)
+	for (int i = 0; i < 11; i++)
 	{
 		if (state[i] == State::keyUpRep)       //State::keyUpRep-놓고 있음
 		{
@@ -68,7 +67,7 @@ void Input::update()
 bool Input::getKeyDown(string keyName)
 {
 	//키이름 ... 인덱스 찾기//
-	for (int i = 0; i < 9; i++)
+	for (int i = 0; i < 11; i++)
 	{
 		if (name[i] == keyName)
 		{
@@ -88,7 +87,7 @@ bool Input::getKeyDown(string keyName)
 bool Input::getKeyUp(string keyName)
 {
 	//키이름 ... 인덱스 찾기//
-	for (int i = 0; i < 9; i++)
+	for (int i = 0; i < 11; i++)
 	{
 		if (name[i] == keyName)
 		{
@@ -108,7 +107,7 @@ bool Input::getKeyUp(string keyName)
 bool Input::getKey(string keyName)
 {
 	//키이름 ... 인덱스 찾기//
-	for (int i = 0; i < 9; i++)
+	for (int i = 0; i < 11; i++)
 	{
 		if (name[i] == keyName)
 		{

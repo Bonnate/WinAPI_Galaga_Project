@@ -15,26 +15,29 @@ void Wall::start()
 
 void Wall::onTriggerStay(GameObject* other)
 {
+	if (!GameManager::GetIsPlayingGame()) return;
+
+
 	if (other->getTag() == "Enemy")
 	{
 		if (this->getTag() == "LeftWall")
 		{
-			other->SetDirection(1);
+			//other->SetDirection(1);
 		}
 
 		else if (this->getTag() == "RightWall")
 		{
-			other->SetDirection(2);
+			//other->SetDirection(2);
 		}
 
 		else if (this->getTag() == "TopWall")
 		{
-			other->SetDirection(3);
+			//other->SetDirection(3);
 		}
 
 		else if (this->getTag() == "BottomWall")
 		{
-			other->SetDirection(4);
+			GameManager::FinishGame();
 		}
 	}
 }

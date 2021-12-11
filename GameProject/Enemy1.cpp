@@ -10,9 +10,8 @@ enum Direction
 
 Enemy1::Enemy1(float px, float py) : Sprite("Enemy", "", true, px, py)
 {
-	this->mMoveTimeDelay = .0f;
-	this->xPosMagnitude = 0;
-	this->yPosMagnitude = 0;
+	this->xPosMagnitude = 30;
+	this->yPosMagnitude = 50;
 }
 
 Enemy1::~Enemy1()
@@ -22,26 +21,36 @@ Enemy1::~Enemy1()
 
 void Enemy1::start()
 {
-	setImage("Asset/Enemy1.bmp");
-	addBoxCollider2D(0, 0, 31, 33);
+	int imgRand = Random::Range(1, 4);
 
-	this->xPosMagnitude = Random::Range(-30, 30);
-	this->yPosMagnitude = Random::Range(-30, 30);
+	switch (imgRand)
+	{
+	case 1:
+		setImage("Asset/Enemy1.bmp");
+		addBoxCollider2D(0, 0, 31, 33);
+		break;
+
+	case 2:
+		setImage("Asset/Enemy2.bmp");
+		addBoxCollider2D(0, 0, 31, 33);
+		break;
+
+	case 3:
+		setImage("Asset/Enemy3.bmp");
+		addBoxCollider2D(0, 0, 26, 22);
+		break;
+
+	case 4:
+		setImage("Asset/Enemy4.bmp");
+		addBoxCollider2D(0, 0, 26, 22);
+		break;
+	}
+
 }
 
 void Enemy1::update()
 {
-	mMoveTimeDelay += Time::deltaTime;
-
-	if (mMoveTimeDelay > 3.0f)
-	{
-		this->xPosMagnitude	= Random::Range(-30, 30);
-		this->yPosMagnitude	= Random::Range(-30, 30);
-
-		mMoveTimeDelay = .0f;
-	}
-
-	translate(xPosMagnitude * Time::deltaTime, yPosMagnitude * Time::deltaTime);
+	translate(xPosMagnitude * Time::deltaTime * (EnemyManager::misForwardMag ? 1 : -1) , yPosMagnitude * Time::deltaTime);
 }
 
 void Enemy1::onTriggerStay(GameObject* other)
@@ -50,14 +59,14 @@ void Enemy1::onTriggerStay(GameObject* other)
 	{
 		GameManager::AddScore(1);
 		other->setActive(false);
-		//destroy(this);
+		destroy(this);
+
+		ObjectManager::instantiate(new Explosion(getPx() - 12 , getPy() - 12), 4);
 	}
 }
 
 void Enemy1::SetDirection(int code)
 {
-	mMoveTimeDelay = .0f;
-
 	switch (code)
 	{
 		case Direction::LEFT:	//1

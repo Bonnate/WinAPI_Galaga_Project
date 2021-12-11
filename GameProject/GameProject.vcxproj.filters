@@ -67,6 +67,12 @@
     <Filter Include="헤더 파일\Hierachy\Canvus">
       <UniqueIdentifier>{5e18d723-3543-4fe5-aedf-7970be4a1519}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Hierachy\FX">
+      <UniqueIdentifier>{aab47d21-92e7-4592-97f2-16f71bf85a8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\FX">
+      <UniqueIdentifier>{2b8deb00-2ef5-490e-b16e-b5c63aa03fa1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -179,6 +185,15 @@
     </ClInclude>
     <ClInclude Include="Wall.h">
       <Filter>헤더 파일\Hierachy\BG</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyManager.h">
+      <Filter>헤더 파일\Hierachy\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="EndingBox.h">
+      <Filter>헤더 파일\Hierachy\Canvus</Filter>
+    </ClInclude>
+    <ClInclude Include="Explosion.h">
+      <Filter>헤더 파일\FX</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -296,6 +311,15 @@
     </ClCompile>
     <ClCompile Include="Wall.cpp">
       <Filter>소스 파일\Hierachy\BG</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyManager.cpp">
+      <Filter>소스 파일\Hierachy\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="EndingBox.cpp">
+      <Filter>소스 파일\Hierachy\Canvus</Filter>
+    </ClCompile>
+    <ClCompile Include="Explosion.cpp">
+      <Filter>소스 파일\Hierachy\FX</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
