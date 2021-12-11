@@ -12,15 +12,19 @@ Enemy1::Enemy1(float px, float py) : Sprite("Enemy", "", true, px, py)
 {
 	this->xPosMagnitude = 30;
 	this->yPosMagnitude = 50;
+	this->mExpSound = nullptr;
 }
 
 Enemy1::~Enemy1()
 {
-
+	
 }
 
 void Enemy1::start()
 {
+
+	mExpSound = (Sound*)ObjectManager::find("EnemyExplosion");
+
 	int imgRand = Random::Range(1, 4);
 
 	switch (imgRand)
@@ -62,6 +66,7 @@ void Enemy1::onTriggerStay(GameObject* other)
 		destroy(this);
 
 		ObjectManager::instantiate(new Explosion(getPx() - 12 , getPy() - 12), 4);
+		mExpSound->playSound();
 	}
 }
 

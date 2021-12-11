@@ -54,6 +54,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     ObjectManager::instantiate(new Sound("Asset/Sound/shoot.wav", "PlayerShot"), 0);
     ObjectManager::instantiate(new Sound("Asset/Sound/hit_1.wav", "PlayerHit"), 0);
+    ObjectManager::instantiate(new Sound("Asset/Sound/explosion.wav", "EnemyExplosion"), 0);
 
     ObjectManager::instantiate(new BG(0, 0), 1);
     ObjectManager::instantiate(new BG(0, -HEIGHT), 1);

@@ -8,6 +8,7 @@ private:
 
 	int xPosMagnitude;
 	int yPosMagnitude;
+	Sound* mExpSound;
 
 public:
 	Enemy1(float px, float py);
