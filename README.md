@@ -1,12 +1,16 @@
 
-> C++ WinAPI를 이용하여 두개의 슈팅 게임을 개발하였습니다. 대학교 2학년 2학기에 작업을 하였으며, 각각 대학교 과제와 스스로 공부를 하면서 제작 한 게임으로, Unity의 게임 프레임워크 구조를 이해하고 따라하여 만든 게임입니다.  
->   
+> C++ WinAPI를 이용하여 개발한 슈팅 게임입니다. <br>
+> 대학교 2학년 2학기에 작업을 하였으며, 각각 대학교 과제를 위해 제작한 게임입니다.
+
+</br>
 
 ## 📺 미리 보기
 
 ![](https://blog.kakaocdn.net/dn/bUGp9k/btsvkRy55jA/PNMkCykuQxt8RIGzNRz4Jk/img.gif)![](https://blog.kakaocdn.net/dn/mGvWD/btsvdq3uq8H/KW2Mx9CrKkvnxw5oBubv3K/img.gif)
 
   
+</br>
+
 
 ## 💬 프로젝트 간단 설명
 
